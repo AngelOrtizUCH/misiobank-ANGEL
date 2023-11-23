@@ -1,0 +1,14 @@
+/* Estilos para el aside */
+.aside {
+    background-color: rgb(237 255 255); /* Cambia esto al color que desees */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+  /* Estilos para los párrafos (p) dentro del aside */
+.p-aside {
+    margin: 10px 0; /* Ajusta según tus necesidades de diseño */
+}

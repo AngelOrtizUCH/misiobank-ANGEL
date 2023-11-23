@@ -1,13 +1,15 @@
 import React from 'react';
+import '../Header/Header.css'
 
-const Header = () => {
-
+const Header = ({ userName, userBalance }) => {
   
-    return (
-      <header>
-        Holi soy un header
-      </header>
-    );
+  return (
+    
+      <div className='header'>
+        <h2 className='h2-header'>BANCO ULTRA CAPITALISTA</h2>
+      </div>
+    
+  );
 };
 
   

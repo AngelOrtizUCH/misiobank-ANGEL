@@ -1,0 +1,29 @@
+/* Estilos para la sección */
+.section {
+    background-color: #f4f4f4; /* Cambia esto al color que desees */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Estilos para el h2 dentro de la sección */
+  .h2-section {
+    color: #333; /* Cambia esto al color que desees */
+    font-size: 2.5rem;
+  }
+  
+  /* Estilos para la lista ul dentro de la sección */
+  .ul-section {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+    font-size: x-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Estilos para los elementos li dentro de la lista ul */
+  .li-section {
+    margin: 10px 0; /* Ajusta según tus necesidades de diseño */
+  }
+  

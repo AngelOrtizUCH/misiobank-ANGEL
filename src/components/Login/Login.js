@@ -1,32 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { loginSuccess, loginFailure } from '../../actions/authActions2';
+import '../Login/Login.css';
 
 const Login = ({ isAuthenticated, loginSuccess, loginFailure }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     alert("Estoy logeando");
-    //GOLPEAR API
-    const apiResponse = { status: 200 };
+    // Simulación de autenticación
+    const validUsername = 'admin';
+    const validPassword = 'password';
 
-    if (apiResponse.status === 200) {
+    if (username === validUsername && password === validPassword) {
       loginSuccess();
     } else {
       loginFailure();
     }
   };
-  
-    return (
-      <div>
-        <h2>Login</h2>
-        <button onClick={handleLogin}>Iniciar sesión</button>
-        <p>{isAuthenticated ? '¡Inicio de sesión exitoso!' : 'Inicio de sesión fallido'}</p>
-      </div>
-    );
-};
 
-const mapStateToProps = state => ({
-    isAuthenticated: state.isAuthenticated,
+  return (
+    <div>
+      <div className="login-container">
+      <h2>NOMBRE DE USUARIO</h2>
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+
+      <h2>CONTRASEÑA</h2>
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button onClick={handleLogin}>Iniciar sesión</button>
+      </div>
+      <div><a href='#'>Haga clic para recuperar su password</a></div>
+      
+    </div>
+    
+    
+    
+  );
+};
+//<p>{isAuthenticated ? '¡Inicio de sesión exitoso!' : 'Inicio de sesión fallido'}</p>
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.isAuthenticated,
 });
-  
+
 export default connect(mapStateToProps, { loginSuccess, loginFailure })(Login);

@@ -1,0 +1,16 @@
+/* Estilos para el header */
+.header {
+    background-color: #2196F3; /* Cambia esto al color que desees */
+    color: white;
+    padding: 10px; /* Ajusta según tus necesidades de diseño */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+  /* Estilos para el h2 dentro del header */
+.h2-header {
+    margin: 0; /* Elimina el margen predeterminado del h2 */
+    FONT-FAMILY: serif;
+    font-size: xx-large;
+    color: ghostwhite;
+}
