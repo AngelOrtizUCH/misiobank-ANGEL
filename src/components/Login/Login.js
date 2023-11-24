@@ -39,7 +39,7 @@ const Login = ({ isAuthenticated, loginSuccess, loginFailure }) => {
 
       <button onClick={handleLogin}>Iniciar sesión</button>
       </div>
-      <div><a href='#'>Haga clic para recuperar su password</a></div>
+      <div><a href='https://www.youtube.com/watch?v=nJrHppTEaN4'>Haga clic para recuperar su password</a></div>
       
     </div>
     

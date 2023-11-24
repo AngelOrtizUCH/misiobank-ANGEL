@@ -11,4 +11,7 @@
   /* Estilos para los párrafos (p) dentro del aside */
 .p-aside {
     margin: 10px 0; /* Ajusta según tus necesidades de diseño */
+    font-size: 220%;
+    padding-top: 10%;
+    float: left;
 }
