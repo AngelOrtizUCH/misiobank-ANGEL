@@ -1,8 +1,8 @@
 /* Estilos para el header */
 .header {
-    background-color: #2196F3; /* Cambia esto al color que desees */
+  background-color: #87CEEB;
     color: white;
-    padding: 10px; /* Ajusta según tus necesidades de diseño */
+    padding: 10px; 
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }

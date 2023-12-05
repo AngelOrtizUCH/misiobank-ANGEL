@@ -1,17 +1,40 @@
+/* Aside.css */
+
 /* Estilos para el aside */
 .aside {
-    background-color: rgb(237 255 255); /* Cambia esto al color que desees */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
+  background-color: rgb(237, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
 }
 
-  /* Estilos para los párrafos (p) dentro del aside */
+/* Estilos para los párrafos (p) dentro del aside */
 .p-aside {
-    margin: 10px 0; /* Ajusta según tus necesidades de diseño */
-    font-size: 220%;
-    padding-top: 10%;
-    float: left;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  padding-top: 10%;
+  float: none; /* Cambiado de 'left' a 'none' para que los elementos no floten */
+  cursor: pointer;
+}
+
+/* Estilos para el botón dentro del aside */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para resaltar ingredientes seleccionados */
+.p-aside.selected {
+  background-color: #ffd700;
 }

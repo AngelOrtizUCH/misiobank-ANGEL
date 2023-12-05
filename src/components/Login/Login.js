@@ -8,10 +8,10 @@ const Login = ({ isAuthenticated, loginSuccess, loginFailure }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    alert("Estoy logeando");
+    alert("Bienvenido Bob!");
     // Simulación de autenticación
-    const validUsername = 'admin';
-    const validPassword = 'password';
+    const validUsername = 'bob';
+    const validPassword = 'sponja';
 
     if (username === validUsername && password === validPassword) {
       loginSuccess();
@@ -23,6 +23,7 @@ const Login = ({ isAuthenticated, loginSuccess, loginFailure }) => {
   return (
     <div>
       <div className="login-container">
+      <h1>WELCOME TO THE KRUSTY KRAB</h1>
       <h2>NOMBRE DE USUARIO</h2>
       <input
         type="text"

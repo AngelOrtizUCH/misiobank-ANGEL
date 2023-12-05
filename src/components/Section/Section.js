@@ -1,28 +1,49 @@
-import React from 'react';
-import '../Section/Section.css'
+// Section.js
+import React, { useState, useEffect } from 'react';
+import '../Section/Section.css';
+import HamburguesaImage from './img/hamburguesa.jpg'; // Ajusta la ruta según tu estructura de carpetas
+import CocinaImage from './img/cocina.jpg'; // Ajusta la ruta según tu estructura de carpetas
 
-const Section = ({ transactions }) => {
-    return (
-        <div className='section'>
-    <h2 className='h2-section'>Transacciones</h2>
-    <ul className='ul-section'>
-        <li className='li-section gasto'>Compra por internet: Tantrico   -$535.66</li>
-        <li className='li-section ingreso'>Donacion: Spot publicitario Milei $304.33</li>
-        <li className='li-section gasto'>Pago de factura de electricidad   -$120.50</li>
-        <li className='li-section gasto'>Compra de comestibles en el supermercado   -$75.25</li>
-        <li className='li-section gasto'>Retiro de efectivo en cajero automático   -$200.00</li>
-        <li className='li-section gasto'>Pago de la membresía del gimnasio   -$45.99</li>
-        <li className='li-section gasto'>Compra de libros en línea   -$68.20</li>
-        <li className='li-section gasto'>Recarga de tarjeta de transporte público   -$30.00</li>
-        <li className='li-section gasto'>Pago de factura de teléfono   -$50.75</li>
-        <li className='li-section gasto'>Almuerzo en un restaurante local   -$25.50</li>
-        <li className='li-section gasto'>Compra de ropa en una tienda de moda   -$90.00</li>
-        <li className='li-section ingreso'>Suscripción mensual a servicio de streaming $12.99</li>
-    </ul>
-</div>
+const Section = ({ selectedIngredients }) => {
+  const [result, setResult] = useState(CocinaImage); // Establece la imagen de la cocina como valor inicial
 
-    
-    );
+  const pasoAPasoActual = [
+    'Pan Inferior',
+    'Lechuga',
+    'Tomate',
+    'Mortadella',
+    'Salsa Secreta',
+    'Pan Superior',
+  ];
+
+  useEffect(() => {
+    // Verifica si se han seleccionado todos los ingredientes
+    const allIngredientsSelected = pasoAPasoActual.every(ingredient => selectedIngredients.includes(ingredient));
+
+    // Si todos los ingredientes están seleccionados, evalúa la lógica
+    if (allIngredientsSelected) {
+      const isEqual = JSON.stringify(selectedIngredients) === JSON.stringify(pasoAPasoActual);
+
+      if (isEqual) {
+        setResult(HamburguesaImage);
+      } else {
+        setResult('¡PREPARA BONITO BOB SPONJA!');
+      }
+    }
+    // Si no todos los ingredientes están seleccionados, no actualiza el resultado
+  }, [selectedIngredients]);
+
+  const resultClassName = result !== '¡PREPARA BONITO BOB SPONJA!' ? 'success' : 'error';
+
+  return (
+    <div className='section'>
+      {result !== '¡PREPARA BONITO BOB SPONJA!' ? (
+        <img src={result} alt='Hamburguesa' className='hamburguesa-img' />
+      ) : (
+        <h2 className={`h2-section ${resultClassName}`}>{result}</h2>
+      )}
+    </div>
+  );
 };
 
-export default (Section);
+export default Section;
